@@ -5,35 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/descriptionBackground"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@color/descriptionBackground">
+    tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/shop"
-        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop"
         tools:ignore="ContentDescription"/>
 
     <TextView
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/titleBackground"
         android:gravity="center"
-        android:textAppearance="@style/TitleText"
+        android:padding="16dp"
         android:text="@string/business_name"
-        android:background="@color/titleBackground"/>
+        android:textAppearance="@style/TitleText"/>
 
     <LinearLayout
-        android:baselineAligned="false"
-        android:padding="16dp"
         android:id="@+id/details_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/detailBackground"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        android:background="@color/detailBackground">
+        android:padding="16dp">
 
         <RelativeLayout
             android:id="@+id/location_container"
@@ -44,27 +44,27 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_centerInParent="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_centerInParent="true"
                 android:src="@drawable/location_icon"
                 tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/street_addr"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/street_addr"/>
+                android:text="@string/street_addr"
+                android:textAppearance="@style/DetailText"/>
 
             <TextView
-                android:layout_below="@id/street_addr"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/street_addr"
                 android:layout_centerHorizontal="true"
-                android:text="@string/city_addr"/>
+                android:text="@string/city_addr"
+                android:textAppearance="@style/DetailText"/>
 
         </RelativeLayout>
 
@@ -77,42 +77,42 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_centerInParent="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_centerInParent="true"
                 android:src="@drawable/time_icon"
                 tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/mon_fri_hours"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/mon_fri_hours"/>
+                android:text="@string/mon_fri_hours"
+                android:textAppearance="@style/DetailText"/>
 
             <TextView
-                android:layout_below="@id/mon_fri_hours"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/mon_fri_hours"
                 android:layout_centerHorizontal="true"
-                android:text="@string/sat_sun_hours"/>
+                android:text="@string/sat_sun_hours"
+                android:textAppearance="@style/DetailText"/>
 
         </RelativeLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:baselineAligned="false"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:paddingBottom="16dp"
         android:id="@+id/details2_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/detailBackground"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        android:background="@color/detailBackground">
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
 
         <RelativeLayout
             android:id="@+id/phone_container"
@@ -123,19 +123,19 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_centerInParent="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_centerInParent="true"
                 android:src="@drawable/phone_icon"
                 tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/phone_number"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/phone_number"/>
+                android:text="@string/phone_number"
+                android:textAppearance="@style/DetailText"/>
 
 
         </RelativeLayout>
@@ -149,30 +149,30 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_centerInParent="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_centerInParent="true"
                 android:src="@drawable/email_icon"
                 tools:ignore="ContentDescription"/>
 
             <TextView
                 android:id="@+id/email"
-                android:textAppearance="@style/DetailText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/email"/>
+                android:text="@string/email"
+                android:textAppearance="@style/DetailText"/>
 
         </RelativeLayout>
 
     </LinearLayout>
 
     <TextView
-        android:textAppearance="@style/DetailText"
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/description"/>
+        android:padding="16dp"
+        android:text="@string/description"
+        android:textAppearance="@style/DetailText"/>
 
 </LinearLayout>
