@@ -1,178 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/descriptionBackground"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/shop"
-        tools:ignore="ContentDescription"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/titleBackground"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/business_name"
-        android:textAppearance="@style/TitleText"/>
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/details_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/detailBackground"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <RelativeLayout
-            android:id="@+id/location_container"
-            android:layout_width="0dp"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/location_icon"
-                tools:ignore="ContentDescription"/>
-
-            <TextView
-                android:id="@+id/street_addr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/street_addr"
-                android:textAppearance="@style/DetailText"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/street_addr"
-                android:layout_centerHorizontal="true"
-                android:text="@string/city_addr"
-                android:textAppearance="@style/DetailText"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/hours_container"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:background="@color/titleBackground"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:padding="@dimen/four_sides_padding"
+            android:text="@string/business_name"
+            android:textAppearance="@style/TitleText" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/time_icon"
-                tools:ignore="ContentDescription"/>
+        <LinearLayout
+            android:id="@+id/details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/detailBackground"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/four_sides_padding">
 
-            <TextView
-                android:id="@+id/mon_fri_hours"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/location_container"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/mon_fri_hours"
-                android:textAppearance="@style/DetailText"/>
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="@dimen/details_bg_icon_size"
+                    android:layout_height="@dimen/details_bg_icon_size"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/location_icon" />
+
+                <TextView
+                    android:id="@+id/street_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:autoLink="map"
+                    android:text="@string/street_addr"
+                    android:textAppearance="@style/DetailText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hours_container"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/mon_fri_hours"
-                android:layout_centerHorizontal="true"
-                android:text="@string/sat_sun_hours"
-                android:textAppearance="@style/DetailText"/>
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        </RelativeLayout>
+                <ImageView
+                    android:layout_width="@dimen/details_bg_icon_size"
+                    android:layout_height="@dimen/details_bg_icon_size"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/time_icon" />
+
+                <TextView
+                    android:id="@+id/mon_fri_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/mon_fri_hours"
+                    android:textAppearance="@style/DetailText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mon_fri_hours"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sat_sun_hours"
+                    android:textAppearance="@style/DetailText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/details2_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/detailBackground"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding">
+
+            <RelativeLayout
+                android:id="@+id/phone_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/details_bg_icon_size"
+                    android:layout_height="@dimen/details_bg_icon_size"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/phone_icon" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:autoLink="phone"
+                    android:text="@string/phone_number"
+                    android:textAppearance="@style/DetailText" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/email_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/details_bg_icon_size"
+                    android:layout_height="@dimen/details_bg_icon_size"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    app:srcCompat="@drawable/email_icon" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:autoLink="email"
+                    android:text="@string/email"
+                    android:textAppearance="@style/DetailText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/four_sides_padding"
+            android:text="@string/description"
+            android:textAppearance="@style/DetailText" />
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/details2_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/detailBackground"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:paddingBottom="16dp"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp">
-
-        <RelativeLayout
-            android:id="@+id/phone_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/phone_icon"
-                tools:ignore="ContentDescription"/>
-
-            <TextView
-                android:id="@+id/phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/phone_number"
-                android:textAppearance="@style/DetailText"/>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/email_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/email_icon"
-                tools:ignore="ContentDescription"/>
-
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/email"
-                android:textAppearance="@style/DetailText"/>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/description"
-        android:textAppearance="@style/DetailText"/>
-
-</LinearLayout>
+</ScrollView>

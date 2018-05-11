@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Mechanics Focus</string>
     <string name="business_name">Mechanics Focus</string>
-    <string name="street_addr">123 Example Dr</string>
-    <string name="city_addr">Durham, NC</string>
+    <string name="street_addr">123 Example St,\nDurham NC</string>
     <string name="mon_fri_hours">Mon-Fri 10am-8pm</string>
     <string name="sat_sun_hours">Sat-Sun 10am-9pm</string>
     <string name="phone_number">123-555-4321</string>
